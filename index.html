@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The black square</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <input id="button" type="button" name="Ya Knopka" value="Press"/>
+    </body>     
+    <script>      
+      function showConsole() {
+        let square = document.createElement("div");
+        square.className = "square";
+        document.body.append(square);
+      }
+      const blackButton = document.querySelector("#button")
+      blackButton.addEventListener("click", showConsole)
+    </script>
+</html>
