@@ -6,13 +6,13 @@ body {
 .button {
     color:blue 
 }
-.square {
+.black-square {
     width: 50px;
     height: 50px;
     background: black;
     color: black;
  }
- .redSquare {
+ .red-square {
     width: 100px;
     height: 100px;
     background: red;

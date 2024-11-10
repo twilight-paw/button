@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The black square</title>
+        <title>The black blackSquare</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
     <input id="button" type="button" value="Press"/>     
     </body>     
-    <script>
-    let square 
-    let redSquare
+    <script>    
     function hide() {
-      if(!square && !redSquare) { 
-        square = document.createElement("div"); 
-        square.className = "square"; 
-        document.body.append(square);
-      } else {
-        if(!redSquare) {
-        square.remove()
-        square = null
-        redSquare = document.createElement("div"); 
-        redSquare.className = "redSquare"; 
-        document.body.append(redSquare);
-        } else {
-          redSquare.remove()
-          redSquare = null                    
-        }        
+      let blackSquare = document.querySelector(".black-square")
+      let redSquare = document.querySelector(".red-square")
+      if(!blackSquare && !redSquare) { 
+        blackSquare = document.createElement("div"); 
+        blackSquare.className = "black-square"; 
+        document.body.append(blackSquare);
+      } else if(blackSquare) {
+          blackSquare.className = "red-square"; 
+        } else {          
+          redSquare.remove();    
+        }
       }
-    }
+    
     const blackButton = document.querySelector("#button");
-    blackButton.addEventListener("click", hide);
+    blackButton.addEventListener("click", hide);    
    </script>
 </html>
