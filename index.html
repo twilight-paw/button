@@ -9,14 +9,23 @@
     </body>     
     <script>
     let square 
+    let redSquare
     function hide() {
-      if(!square) { 
+      if(!square && !redSquare) { 
         square = document.createElement("div"); 
         square.className = "square"; 
         document.body.append(square);
       } else {
+        if(!redSquare) {
         square.remove()
         square = null
+        redSquare = document.createElement("div"); 
+        redSquare.className = "redSquare"; 
+        document.body.append(redSquare);
+        } else {
+          redSquare.remove()
+          redSquare = null                    
+        }        
       }
     }
     const blackButton = document.querySelector("#button");
